@@ -1,0 +1,2 @@
+## Custom updated version of [AccurateWorldMap](https://www.esoui.com/downloads/info3377-AccurateWorldMap.html) that has Solstice (drawn by me)
+<img src="./tiles/tamriel/result.png" alt="Preview map of Tamriel" />
