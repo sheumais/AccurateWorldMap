@@ -7,7 +7,7 @@ local subfolder = "/blobs/dlc/"
 -- Orsinium / Wrothgar --
 tamriel.zones[667] = {
    textureFile = prefix..subfolder.."blob-wrothgar.dds",
-   bounds = { xN = 0.23889, yN = 0.207153, widthN = 0.1420898, heightN = 0.1420898, },
+   bounds = { xN = 0.23889, yN = 0.175883, widthN = 0.1420898, heightN = 0.1420898, },
    offsets = { xN = 0.007324219, },
    hitbox = {
       { xN = 0.0130, yN = 0.7156, },
@@ -61,7 +61,7 @@ tamriel.zones[667] = {
       { xN = 0.1242, yN = 0.6412, },
       { xN = 0.0677, yN = 0.6510, },
       { xN = 0.0599, yN = 0.6737, },
-      { xN = 0.0208, yN = 0.7042, },   
+      { xN = 0.0208, yN = 0.7042, },
    }
 }
 
@@ -70,7 +70,7 @@ tamriel.zones[667] = {
 -- Hew's Bane --
 tamriel.zones[994] = {
    textureFile = prefix..subfolder.."blob-hewsbane.dds",
-   bounds = { xN = 0.25683, yN = 0.46057, widthN = 0.090332, heightN = 0.090332, },
+   bounds = { xN = 0.25683, yN = 0.4293, widthN = 0.090332, heightN = 0.090332, },
    hitbox = {
       { xN = 0.0933, yN = 0.2731, },
       { xN = 0.1089, yN = 0.3667, },
@@ -110,14 +110,14 @@ tamriel.zones[994] = {
       { xN = 0.2398, yN = 0.2357, },
       { xN = 0.1941, yN = 0.1952, },
       { xN = 0.1546, yN = 0.2160, },
-      { xN = 0.1297, yN = 0.2243, },   
+      { xN = 0.1297, yN = 0.2243, },
    }
 }
 
 -- Gold Coast --
 tamriel.zones[1006] = {
    textureFile = prefix..subfolder.."blob-goldcoast.dds",
-   bounds = { xN = 0.3209, yN = 0.51647, widthN = 0.1062, heightN = 0.1062 },
+   bounds = { xN = 0.3209, yN = 0.4852, widthN = 0.1062, heightN = 0.1062 },
    hitbox = {
       { xN = 0.3151, yN = 0.1040, },
       { xN = 0.2384, yN = 0.1516, },
@@ -143,7 +143,7 @@ tamriel.zones[1006] = {
       { xN = 0.3719, yN = 0.2811, },
       { xN = 0.3587, yN = 0.1978, },
       { xN = 0.3494, yN = 0.1529, },
-      { xN = 0.3243, yN = 0.1159, },   
+      { xN = 0.3243, yN = 0.1159, },
    }
 }
 
@@ -151,7 +151,7 @@ tamriel.zones[1006] = {
 -- Craglorn --
 tamriel.zones[1126] = {
    textureFile = prefix..subfolder.."blob-craglorn.dds",
-   bounds = { xN = 0.36, yN = 0.308837, widthN = 0.12207, heightN = 0.12207, },
+   bounds = { xN = 0.36, yN = 0.277567, widthN = 0.12207, heightN = 0.12207, },
    hitbox = {
       { xN = 0.1745, yN = 0.1865, },
       { xN = 0.1515, yN = 0.2175, },
@@ -173,14 +173,14 @@ tamriel.zones[1126] = {
       { xN = 0.5677, yN = 0.2233, },
       { xN = 0.4286, yN = 0.2038, },
       { xN = 0.2906, yN = 0.2198, },
-      { xN = 0.1963, yN = 0.1888, },   
+      { xN = 0.1963, yN = 0.1888, },
    }
 }
 
 -- Murkmire --
 tamriel.zones[1484] = {
    textureFile = prefix..subfolder.."blob-murkmire.dds",
-   bounds = { xN = 0.70532, yN = 0.71777, widthN = 0.08496, heightN = 0.08496 },
+   bounds = { xN = 0.70532, yN = 0.6865, widthN = 0.08496, heightN = 0.08496 },
    offsets = { xN = 0.000610352 },
    hitbox = {
       { xN = 0.0023, yN = 0.3110, },
@@ -217,16 +217,16 @@ tamriel.zones[1484] = {
       { xN = 0.1174, yN = 0.2119, },
       { xN = 0.0476, yN = 0.2201, },
       { xN = 0.0312, yN = 0.2447, },
-      { xN = 0.0107, yN = 0.2940, },   
+      { xN = 0.0107, yN = 0.2940, },
    }
 }
 
 -- Southern Elsweyr --
 tamriel.zones[1654] = {
    textureFile = prefix..subfolder.."blob-southernelsweyr.dds",
-   bounds = { xN = 0.50244, yN = 0.66833, widthN = 0.12878, heightN = 0.12878, },
+   bounds = { xN = 0.50244, yN = 0.63706, widthN = 0.12878, heightN = 0.12878, },
    offsets = { xN = 0.0128, yN = 0.008, },
-   hitbox = { 
+   hitbox = {
       { xN = 0.0338, yN = 0.2343, },
       { xN = 0.1254, yN = 0.4359, },
       { xN = 0.1047, yN = 0.4784, },
@@ -290,14 +290,14 @@ tamriel.zones[1654] = {
       { xN = 0.2736, yN = 0.2027, },
       { xN = 0.1799, yN = 0.2146, },
       { xN = 0.1265, yN = 0.2430, },
-      { xN = 0.0665, yN = 0.2419, },   
+      { xN = 0.0665, yN = 0.2419, },
    },
 }
 
 -- The Reach --
 tamriel.zones[1814] = {
    textureFile = prefix..subfolder.."blob-thereach.dds",
-   bounds = { xN = 0.34411, yN = 0.2478, widthN = 0.109375, heightN = 0.109375, },
+   bounds = { xN = 0.34411, yN = 0.21653, widthN = 0.109375, heightN = 0.109375, },
    hitbox = {
       { xN = 0.3023, yN = 0.1519, },
       { xN = 0.2433, yN = 0.2597, },
@@ -332,7 +332,7 @@ tamriel.zones[1814] = {
       { xN = 0.6436, yN = 0.3136, },
       { xN = 0.5628, yN = 0.1917, },
       { xN = 0.4820, yN = 0.1532, },
-      { xN = 0.3845, yN = 0.1352, },   
+      { xN = 0.3845, yN = 0.1352, },
    }
 }
 
@@ -340,8 +340,8 @@ tamriel.zones[1814] = {
 tamriel.zones[2212] = {
    disableZoneNames = true,
    textureFile = prefix..subfolder.."blob-galen.dds",
-   bounds = { xN = 0.047363, yN = 0.559326, widthN = 0.02172, heightN = 0.02172, },
-   hitbox = { 
+   bounds = { xN = 0.047363, yN = 0.528056, widthN = 0.02172, heightN = 0.02172, },
+   hitbox = {
       { xN = 0.2135, yN = 0.0929, },
       { xN = 0.1273, yN = 0.1732, },
       { xN = 0.0529, yN = 0.3159, },
@@ -354,6 +354,6 @@ tamriel.zones[2212] = {
       { xN = 0.9600, yN = 0.6252, },
       { xN = 0.6715, yN = 0.2773, },
       { xN = 0.5882, yN = 0.1464, },
-      { xN = 0.2195, yN = 0.0899, },   
+      { xN = 0.2195, yN = 0.0899, },
    }
 }

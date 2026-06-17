@@ -9,7 +9,7 @@ local subfolder = "/blobs/misc/"
 tamriel.zones[103] = {
    disableZoneNames = true,
    textureFile = prefix..subfolder.."blob-earthforge.dds",
-   bounds = { xN = 0.35253, yN = 0.29174, widthN = 0.01477, heightN = 0.01477, },
+   bounds = { xN = 0.35253, yN = 0.26047, widthN = 0.01477, heightN = 0.01477, },
    hitbox = {
       { xN = 0.6148, yN = 0.1143, },
       { xN = 0.5273, yN = 0.1056, },
@@ -21,7 +21,7 @@ tamriel.zones[103] = {
       { xN = 0.3480, yN = 0.8534, },
       { xN = 0.6498, yN = 0.9583, },
       { xN = 0.7547, yN = 0.4510, },
-      { xN = 0.6498, yN = 0.2149, },   
+      { xN = 0.6498, yN = 0.2149, },
    }
 }
 
@@ -30,7 +30,7 @@ tamriel.zones[103] = {
 tamriel.zones[1056] = {
    disableZoneNames = true,
    textureFile = prefix..subfolder.."blob-jerallmountains.dds",
-   bounds = { xN = 0.61584, yN = 0.40026, widthN = 0.01232, heightN = 0.01232, },
+   bounds = { xN = 0.61584, yN = 0.36899, widthN = 0.01232, heightN = 0.01232, },
    offsets = { yN = 0.00061 },
    hitbox = {
       { xN = 0.6880, yN = 0.0193, },
@@ -50,7 +50,7 @@ tamriel.zones[1056] = {
       { xN = 0.7457, yN = 0.6013, },
       { xN = 0.7614, yN = 0.2814, },
       { xN = 0.8715, yN = 0.0717, },
-      { xN = 0.8505, yN = 0.0245, },   
+      { xN = 0.8505, yN = 0.0245, },
    }
 }
 
@@ -58,7 +58,7 @@ tamriel.zones[1056] = {
 tamriel.zones[1061] = {
    disableZoneNames = true,
    textureFile = prefix..subfolder.."blob-blackwoodborderlands.dds",
-   bounds = { xN = 0.71264, yN = 0.6455, widthN = 0.01867, heightN = 0.01867, },
+   bounds = { xN = 0.71264, yN = 0.61423, widthN = 0.01867, heightN = 0.01867, },
    hitbox = {
       { xN = 0.0681, yN = 0.2895, },
       { xN = 0.1097, yN = 0.3760, },
@@ -77,7 +77,7 @@ tamriel.zones[1061] = {
       { xN = 0.6597, yN = 0.0889, },
       { xN = 0.5802, yN = 0.1166, },
       { xN = 0.5456, yN = 0.1719, },
-      { xN = 0.1892, yN = 0.1996, },   
+      { xN = 0.1892, yN = 0.1996, },
    }
 }
 
@@ -85,7 +85,7 @@ tamriel.zones[1061] = {
 tamriel.zones[1588] = {
    disableZoneNames = true,
    textureFile = prefix..subfolder.."blob-hallsofcolossus.dds",
-   bounds = { xN = 0.5194, yN = 0.74072, widthN = 0.015747, heightN = 0.015747, },
+   bounds = { xN = 0.5194, yN = 0.70945, widthN = 0.015747, heightN = 0.015747, },
    offsets = { xN = 0.003051758, yN = 0.00402832, widthN = 0.005981445, heightN = 0.005981445, },
    hitbox = {
       { xN = 0.2598, yN = 0.1154, },
@@ -100,13 +100,13 @@ tamriel.zones[1588] = {
       { xN = 0.8680, yN = 0.3004, },
       { xN = 0.8270, yN = 0.2060, },
       { xN = 0.5727, yN = 0.0543, },
-      { xN = 0.2937, yN = 0.0748, },   
+      { xN = 0.2937, yN = 0.0748, },
    }
 }
 
 --[[
 -- Ancient City of Rockgrove -- --
-maps[2004] = { parentId = 27, maxZoom = 5, } 
+maps[2004] = { parentId = 27, maxZoom = 5, }
 --maps[2004].pois[468] = { showInMap = true, xN = 0.312, yN = 0.15, } -- rockgrove
 tamriel.pois[468] = { xN = 0.705, yN = 0.765, }
 tamriel.zones[2004] = {
@@ -121,7 +121,7 @@ tamriel.zones[2004] = {
 
 --[[
 -- Sunspire Temple Grounds --
-maps[1649] = { parentId = 27, maxZoom = 5, } 
+maps[1649] = { parentId = 27, maxZoom = 5, }
 tamriel.pois[399] = { xN = 0.506, yN = 0.713, }
 tamriel.zones[1649] = {
    hideName = true,

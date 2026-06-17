@@ -14,16 +14,16 @@ tamriel.zones[201] = {
    faction = "DC",
    storyIndex = 1,
    textureFile = prefix..subfolder.."blob-strosmkai.dds",
-   bounds = { xN = 0.201416, yN = 0.532592, widthN = 0.024536, heightN = 0.024536, },
+   bounds = { xN = 0.201416, yN = 0.501322, widthN = 0.024536, heightN = 0.024536, },
    --offsets = { xN = 0.01159, }, -- TODO might need to be negative
-   hitbox = { 
+   hitbox = {
       { xN = 0.1760, yN = 0.1024, },
       { xN = 0.0333, yN = 0.2904, },
       { xN = 0.0622, yN = 0.6642, },
       { xN = 0.4702, yN = 0.9301, },
       { xN = 0.7914, yN = 0.8222, },
       { xN = 0.8993, yN = 0.3589, },
-      { xN = 0.9178, yN = 0.2009, },   
+      { xN = 0.9178, yN = 0.2009, },
    }
 }
 
@@ -33,7 +33,7 @@ tamriel.zones[227] = {
    faction = "DC",
    storyIndex = 2,
    textureFile = prefix..subfolder.."blob-betnikh.dds",
-   bounds = { xN = 0.1156, yN = 0.43847, widthN = 0.02722, heightN = 0.02722 },
+   bounds = { xN = 0.1156, yN = 0.4072, widthN = 0.02722, heightN = 0.02722 },
    hitbox = {
       { xN = 0.6750, yN = 0.0918, },
       { xN = 0.1506, yN = 0.2935, },
@@ -45,7 +45,7 @@ tamriel.zones[227] = {
       { xN = 0.8340, yN = 0.5070, },
       { xN = 0.8530, yN = 0.3718, },
       { xN = 0.8221, yN = 0.2460, },
-      { xN = 0.7652, yN = 0.1440, },   
+      { xN = 0.7652, yN = 0.1440, },
    }
 }
 
@@ -55,7 +55,7 @@ tamriel.zones[1] = {
    faction = "DC",
    storyIndex = 3,
    textureFile = prefix..subfolder.."blob-glenumbra.dds",
-   bounds = { xN = 0.09399, yN = 0.29895, widthN = 0.14013, heightN = 0.14013, },
+   bounds = { xN = 0.09399, yN = 0.26768, widthN = 0.14013, heightN = 0.14013, },
    hitbox = {
       { xN = 0.5936, yN = 0.0432, },
       { xN = 0.5376, yN = 0.1837, },
@@ -112,7 +112,7 @@ tamriel.zones[1] = {
       { xN = 0.7603, yN = 0.0606, },
       { xN = 0.6608, yN = 0.0767, },
       { xN = 0.6173, yN = 0.0680, },
-      { xN = 0.5974, yN = 0.0407, },   
+      { xN = 0.5974, yN = 0.0407, },
    },
 }
 
@@ -122,7 +122,7 @@ tamriel.zones[12] = {
    faction = "DC",
    storyIndex = 4,
    textureFile = prefix..subfolder.."blob-stormhaven.dds",
-   bounds = { xN = 0.19995, yN = 0.27954, widthN = 0.133, heightN = 0.133, },
+   bounds = { xN = 0.19995, yN = 0.24827, widthN = 0.133, heightN = 0.133, },
    hitbox = {
       { xN = 0.1507, yN = 0.1749, },
       { xN = 0.1121, yN = 0.1981, },
@@ -177,7 +177,7 @@ tamriel.zones[12] = {
       { xN = 0.2555, yN = 0.2162, },
       { xN = 0.2281, yN = 0.1930, },
       { xN = 0.1739, yN = 0.1878, },
-      { xN = 0.1542, yN = 0.1758, },   
+      { xN = 0.1542, yN = 0.1758, },
    },
 }
 
@@ -187,9 +187,9 @@ tamriel.zones[10] = {
    faction = "DC",
    storyIndex = 5,
    textureFile = prefix..subfolder.."blob-rivenspire.dds",
-   bounds = { xN = 0.1726, yN = 0.21875, widthN = 0.10852, heightN = 0.10852,  },
+   bounds = { xN = 0.1726, yN = 0.18748, widthN = 0.10852, heightN = 0.10852,},
    offsets = { xN = 0.01135, },
-   hitbox = { 
+   hitbox = {
       { xN = 0.0445, yN = 0.7932, },
       { xN = 0.0718, yN = 0.8301, },
       { xN = 0.1409, yN = 0.8446, },
@@ -227,7 +227,7 @@ tamriel.zones[10] = {
       { xN = 0.1841, yN = 0.5119, },
       { xN = 0.1162, yN = 0.5944, },
       { xN = 0.0542, yN = 0.6927, },
-      { xN = 0.0335, yN = 0.7638, },   
+      { xN = 0.0335, yN = 0.7638, },
    },
 }
 
@@ -237,8 +237,8 @@ tamriel.zones[30] = {
    faction = "DC",
    storyIndex = 6,
    textureFile = prefix..subfolder.."blob-thealikr.dds",
-   bounds = { xN = 0.1621, yN = 0.33666, widthN = 0.15, heightN = 0.15, },
-   hitbox = { 
+   bounds = { xN = 0.1621, yN = 0.30539, widthN = 0.15, heightN = 0.15, },
+   hitbox = {
       { xN = 0.0825, yN = 0.5730, },
       { xN = 0.1046, yN = 0.6035, },
       { xN = 0.1724, yN = 0.6294, },
@@ -296,7 +296,7 @@ tamriel.zones[30] = {
       { xN = 0.0750, yN = 0.4797, },
       { xN = 0.0616, yN = 0.5095, },
       { xN = 0.0698, yN = 0.5336, },
-      { xN = 0.0849, yN = 0.5573, },   
+      { xN = 0.0849, yN = 0.5573, },
    },
 }
 
@@ -306,7 +306,7 @@ tamriel.zones[20] = {
    faction = "DC",
    storyIndex = 7,
    textureFile = prefix..subfolder.."blob-bangkorai.dds",
-   bounds = { xN = 0.2832, yN = 0.29614, widthN = 0.11901, heightN = 0.11901, },
+   bounds = { xN = 0.2832, yN = 0.26487, widthN = 0.11901, heightN = 0.11901, },
    hitbox = {
       { xN = 0.6146, yN = 0.0508, },
       { xN = 0.5604, yN = 0.0638, },
@@ -339,6 +339,6 @@ tamriel.zones[20] = {
       { xN = 0.7502, yN = 0.1652, },
       { xN = 0.6983, yN = 0.1038, },
       { xN = 0.6594, yN = 0.0826, },
-      { xN = 0.6111, yN = 0.0531, },   
+      { xN = 0.6111, yN = 0.0531, },
    }
 }

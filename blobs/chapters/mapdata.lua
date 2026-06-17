@@ -7,7 +7,7 @@ local subfolder = "/blobs/chapters/"
 -- Vvardenfell --
 tamriel.zones[1060] = {
    textureFile = prefix..subfolder.."blob-vvardenfell.dds",
-   bounds = { xN = 0.651367, yN = 0.23547, widthN = 0.20092, heightN = 0.20092, },
+   bounds = { xN = 0.651367, yN = 0.204200, widthN = 0.20092, heightN = 0.20092, },
    hitbox = {
       { xN = 0.3814, yN = 0.0253, },
       { xN = 0.3650, yN = 0.0363, },
@@ -37,14 +37,14 @@ tamriel.zones[1060] = {
       { xN = 0.7151, yN = 0.1238, },
       { xN = 0.5740, yN = 0.0275, },
       { xN = 0.3858, yN = 0.0221, },
-      { xN = 0.3650, yN = 0.0374, },   
+      { xN = 0.3650, yN = 0.0374, },
    }
 }
 
 -- Summerset Isle --
 tamriel.zones[1349] = {
    textureFile = prefix..subfolder.."blob-summersetisle.dds",
-   bounds = { xN = 0.0646972, yN = 0.571166, widthN = 0.2668457, heightN = 0.2668457, },
+   bounds = { xN = 0.0646972, yN = 0.539896, widthN = 0.2668457, heightN = 0.2668457, },
    hitbox = {
       { xN = 0.4343, yN = 0.0875, },
       { xN = 0.3197, yN = 0.1369, },
@@ -87,7 +87,7 @@ tamriel.zones[1349] = {
       { xN = 0.5455, yN = 0.1707, },
       { xN = 0.5117, yN = 0.1378, },
       { xN = 0.4890, yN = 0.1163, },
-      { xN = 0.4887, yN = 0.0804, },   
+      { xN = 0.4887, yN = 0.0804, },
    }
 }
 
@@ -95,7 +95,7 @@ tamriel.zones[1349] = {
 -- Northern Elsweyr --
 tamriel.zones[1555] = {
    textureFile = prefix..subfolder.."blob-northernelsweyr.dds",
-   bounds = { xN = 0.477416, yN = 0.58776, widthN = 0.132812, heightN = 0.132812, },
+   bounds = { xN = 0.477416, yN = 0.556490, widthN = 0.132812, heightN = 0.132812, },
    offsets = { xN = -0.003, yN = -0.0067, widthN = 0.01, heightN = 0.01 },
    --offsets = { xN = 0.006591 },
    hitbox = {
@@ -130,14 +130,14 @@ tamriel.zones[1555] = {
       { xN = 0.5416, yN = 0.0641, },
       { xN = 0.5115, yN = 0.0628, },
       { xN = 0.4432, yN = 0.1022, },
-      { xN = 0.4156, yN = 0.0969, },   
+      { xN = 0.4156, yN = 0.0969, },
    }
 }
 
 -- Western Skyrim --
 tamriel.zones[1719] = {
    textureFile = prefix..subfolder.."blob-westernskyrim.dds",
-   bounds = { xN = 0.3695, yN = 0.17224, widthN = 0.155639, heightN = 0.155639, },
+   bounds = { xN = 0.3695, yN = 0.140970, widthN = 0.155639, heightN = 0.155639, },
    hitbox = {
       { xN = 0.0723, yN = 0.2347, },
       { xN = 0.0879, yN = 0.3982, },
@@ -176,14 +176,14 @@ tamriel.zones[1719] = {
       { xN = 0.2828, yN = 0.1507, },
       { xN = 0.1742, yN = 0.1988, },
       { xN = 0.1204, yN = 0.2056, },
-      { xN = 0.0846, yN = 0.2246, },   
+      { xN = 0.0846, yN = 0.2246, },
    }
 }
 
 -- Blackwood --
 tamriel.zones[1887] = {
    textureFile = prefix..subfolder.."blob-blackwood.dds",
-   bounds = { xN = 0.5801, yN = 0.58557, widthN = 0.15954, heightN = 0.15954 },
+   bounds = { xN = 0.5801, yN = 0.554300, widthN = 0.15954, heightN = 0.15954 },
    hitbox = {
       { xN = 0.1072, yN = 0.0316, },
       { xN = 0.0951, yN = 0.1049, },
@@ -254,14 +254,14 @@ tamriel.zones[1887] = {
       { xN = 0.3760, yN = 0.0284, },
       { xN = 0.3454, yN = 0.0382, },
       { xN = 0.2055, yN = 0.0393, },
-      { xN = 0.1137, yN = 0.0305, },   
+      { xN = 0.1137, yN = 0.0305, },
    }
 }
 
 -- High Isle and Amenos --
 tamriel.zones[2114] = {
    textureFile = prefix..subfolder.."blob-highisle.dds",
-   bounds = { xN = 0.04907, yN = 0.5686, widthN = 0.0325, heightN = 0.03295, },
+   bounds = { xN = 0.04907, yN = 0.537330, widthN = 0.0325, heightN = 0.03295, },
    hitbox = {
       { xN = 0.1299, yN = 0.9618, },
       { xN = 0.8673, yN = 0.9383, },
@@ -278,14 +278,14 @@ tamriel.zones[2114] = {
       { xN = 0.1260, yN = 0.5521, },
       { xN = 0.0902, yN = 0.6874, },
       { xN = 0.0902, yN = 0.7442, },
-      { xN = 0.1021, yN = 0.9207, },   
+      { xN = 0.1021, yN = 0.9207, },
    }
 }
 
 -- Telvanni Peninsula --
 tamriel.zones[2274] = {
    textureFile = prefix..subfolder.."blob-necrom.dds",
-   bounds = { xN = 0.794555, yN = 0.3413, widthN = 0.131958, heightN = 0.17041, },
+   bounds = { xN = 0.794555, yN = 0.310030, widthN = 0.131958, heightN = 0.17041, },
    --offsets = { xN = 0.8035, yN = 0.3413, widthN = 0.12268, heightN = 0.17041, },
    hitbox = {
       { xN = 0.3877, yN = 0.1855, },
@@ -351,7 +351,7 @@ tamriel.zones[2274] = {
       { xN = 0.4685, yN = 0.2382, },
       { xN = 0.4494, yN = 0.2308, },
       { xN = 0.4313, yN = 0.2011, },
-      { xN = 0.3920, yN = 0.1847, },   
+      { xN = 0.3920, yN = 0.1847, },
    }
 }
 
@@ -360,7 +360,7 @@ tamriel.zones[2274] = {
 tamriel.zones[2427] = {
    name = "West Weald",
    textureFile = prefix..subfolder.."blob-westweald.dds",
-   bounds = { xN = 0.3242, yN = 0.395, widthN = 0.2118, heightN = 0.2118, },
+   bounds = { xN = 0.3242, yN = 0.363730, widthN = 0.2118, heightN = 0.2118, },
    offsets = { xN = 0.02, yN = 0.00, widthN = -0.05, heightN = 0.001 },
    --offsets = { xN = 0.019, yN = 0.001, widthN = -0.09, heightN = 0.000 },
    --offsets = { xN = 0.015, yN = 0.01, widthN = -0.045, },
@@ -429,12 +429,30 @@ tamriel.zones[2427] = {
 -- Solstice --
 tamriel.zones[2603] = {
    textureFile = prefix..subfolder.."blob-solstice.dds",
-   bounds = { xN = 0.63, yN = 0.8765, widthN = 0.0960, heightN = 0.0960, },
+   -- bounds = { xN = 0.63, yN = 0.845230, widthN = 0.0960, heightN = 0.0960, },
+   bounds = { xN = 0.6499, yN = 0.8206, widthN = 0.09145, heightN = 0.09145, },
    hitbox = {
-      { xN = 0.0, yN = 0.0 },
-      { xN = 1.0, yN = 0.0 },
-      { xN = 1.0, yN = 1.0 },
-      { xN = 0.0, yN = 1.0 },
+      { xN = 0.9347, yN = 0.1842, },
+      { xN = 0.8674, yN = 0.1807, },
+      { xN = 0.7983, yN = 0.1756, },
+      { xN = 0.7517, yN = 0.2723, },
+      { xN = 0.6740, yN = 0.2256, },
+      { xN = 0.6049, yN = 0.1255, },
+      { xN = 0.5359, yN = 0.1773, },
+      { xN = 0.4323, yN = 0.2343, },
+      { xN = 0.4236, yN = 0.3051, },
+      { xN = 0.2872, yN = 0.3603, },
+      { xN = 0.0921, yN = 0.2740, },
+      { xN = 0.0230, yN = 0.3275, },
+      { xN = 0.0368, yN = 0.5416, },
+      { xN = 0.2216, yN = 0.4916, },
+      { xN = 0.2199, yN = 0.6798, },
+      { xN = 0.4150, yN = 0.8335, },
+      { xN = 0.4841, yN = 0.8922, },
+      { xN = 0.6136, yN = 0.8093, },
+      { xN = 0.8294, yN = 0.8887, },
+      { xN = 0.9503, yN = 0.5986, },
+      { xN = 0.9451, yN = 0.1738, },
    }
 }
 

@@ -14,7 +14,7 @@ local prefix = theme.prefix
 -- Cyrodiil --
 tamriel.zones[16] = {
    textureFile = prefix.."/blobs/cyrodiil/blob-cyrodiil.dds",
-   bounds = { xN = 0.44897, yN = 0.38818, widthN = 0.22326, heightN = 0.22326 },
+   bounds = { xN = 0.44897, yN = 0.356910, widthN = 0.22326, heightN = 0.22326 },
    hitbox = {
       { xN = 0.1232, yN = 0.0660, },
       { xN = 0.1222, yN = 0.0906, },
@@ -85,7 +85,7 @@ tamriel.zones[16] = {
       { xN = 0.2778, yN = 0.0941, },
       { xN = 0.1958, yN = 0.0712, },
       { xN = 0.1702, yN = 0.0688, },
-      { xN = 0.1471, yN = 0.0617, },   
+      { xN = 0.1471, yN = 0.0617, },
    }
 }
 
@@ -135,6 +135,6 @@ ic.zones[900] = {
       { xN = 0.808, yN = 0.111 },
       { xN = 0.738, yN = 0.066 },
       { xN = 0.616, yN = 0.020 },
-      { xN = 0.549, yN = 0.006 },   
+      { xN = 0.549, yN = 0.006 },
    },
 }

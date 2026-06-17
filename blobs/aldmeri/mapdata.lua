@@ -13,7 +13,7 @@ tamriel.zones[258] = {
    faction = "AD",
    storyIndex = 1,
    textureFile = prefix..subfolder.."blob-khenarthisroost.dds",
-   bounds = { xN = 0.52282, yN = 0.767944, widthN = 0.019287, heightN = 0.019287},
+   bounds = { xN = 0.52282, yN = 0.736674, widthN = 0.019287, heightN = 0.019287},
    hitbox = {
       { xN = 0.4921, yN = 0.0060, },
       { xN = 0.1974, yN = 0.2571, },
@@ -24,7 +24,7 @@ tamriel.zones[258] = {
       { xN = 0.8973, yN = 0.7260, },
       { xN = 0.9442, yN = 0.6121, },
       { xN = 0.8772, yN = 0.3174, },
-      { xN = 0.7734, yN = 0.0127, },   
+      { xN = 0.7734, yN = 0.0127, },
    }
 }
 
@@ -33,8 +33,8 @@ tamriel.zones[143] = {
    faction = "AD",
    storyIndex = 2,
    textureFile = prefix..subfolder.."blob-auridon.dds",
-   bounds = { xN = 0.18347, yN = 0.56872, widthN = 0.15905, heightN = 0.15905 },
-   hitbox = { 
+   bounds = { xN = 0.18347, yN = 0.537450, widthN = 0.15905, heightN = 0.15905 },
+   hitbox = {
       { xN = 0.2770, yN = 0.0198, },
       { xN = 0.1060, yN = 0.0395, },
       { xN = 0.0962, yN = 0.0516, },
@@ -64,7 +64,7 @@ tamriel.zones[143] = {
       { xN = 0.4316, yN = 0.1075, },
       { xN = 0.3702, yN = 0.0691, },
       { xN = 0.3231, yN = 0.0329, },
-      { xN = 0.2759, yN = 0.0198, },   
+      { xN = 0.2759, yN = 0.0198, },
    }
 }
 
@@ -74,7 +74,7 @@ tamriel.zones[9] = {
    faction = "AD",
    storyIndex = 3,
    textureFile = prefix..subfolder.."blob-grahtwood.dds",
-   bounds = { xN = 0.381469, yN = 0.636718, widthN = 0.150634, heightN = 0.150634, },
+   bounds = { xN = 0.381469, yN = 0.605448, widthN = 0.150634, heightN = 0.150634, },
    hitbox = {
       { xN = 0.1131, yN = 0.1271, },
       { xN = 0.1699, yN = 0.2361, },
@@ -129,7 +129,7 @@ tamriel.zones[9] = {
       { xN = 0.2798, yN = 0.1392, },
       { xN = 0.2277, yN = 0.1597, },
       { xN = 0.1625, yN = 0.1448, },
-      { xN = 0.1317, yN = 0.1374, },   
+      { xN = 0.1317, yN = 0.1374, },
    }
 }
 
@@ -140,7 +140,7 @@ tamriel.zones[300] = {
    storyIndex = 4,
    description = "",
    textureFile = prefix..subfolder.."blob-greenshade.dds",
-   bounds = { xN = 0.31555, yN = 0.63049, widthN = 0.108398, heightN = 0.108398, },
+   bounds = { xN = 0.31555, yN = 0.599220, widthN = 0.108398, heightN = 0.108398, },
    hitbox = {
       { xN = 0.2746, yN = 0.0016, },
       { xN = 0.2576, yN = 0.0985, },
@@ -171,7 +171,7 @@ tamriel.zones[300] = {
       { xN = 0.6779, yN = 0.1138, },
       { xN = 0.4995, yN = 0.0408, },
       { xN = 0.4143, yN = 0.0468, },
-      { xN = 0.3433, yN = 0.0022, },   
+      { xN = 0.3433, yN = 0.0022, },
    }
 }
 
@@ -181,7 +181,7 @@ tamriel.zones[22] = {
    faction = "AD",
    storyIndex = 5,
    textureFile = prefix..subfolder.."blob-malabaltor.dds",
-   bounds = { xN = 0.339477, yN = 0.56, widthN = 0.117675, heightN = 0.117675, },
+   bounds = { xN = 0.339477, yN = 0.528730, widthN = 0.117675, heightN = 0.117675, },
    hitbox = {
       { xN = 0.0650, yN = 0.5969, },
       { xN = 0.1067, yN = 0.5993, },
@@ -219,7 +219,7 @@ tamriel.zones[22] = {
       { xN = 0.2558, yN = 0.3930, },
       { xN = 0.1556, yN = 0.3954, },
       { xN = 0.0972, yN = 0.3930, },
-      { xN = 0.0368, yN = 0.5699, },   
+      { xN = 0.0368, yN = 0.5699, },
    }
 }
 
@@ -229,7 +229,7 @@ tamriel.zones[256] = {
    faction = "AD",
    storyIndex = 6,
    textureFile = prefix..subfolder.."blob-reapersmarch.dds",
-   bounds = { xN = 0.4296875, yN = 0.548339, widthN = 0.114257, heightN = 0.114257, },
+   bounds = { xN = 0.4296875, yN = 0.517069, widthN = 0.114257, heightN = 0.114257, },
    hitbox = {
       { xN = 0.1550, yN = 0.1873, },
       { xN = 0.1730, yN = 0.2484, },
@@ -271,6 +271,6 @@ tamriel.zones[256] = {
       { xN = 0.2570, yN = 0.1083, },
       { xN = 0.2180, yN = 0.1303, },
       { xN = 0.1790, yN = 0.1473, },
-      { xN = 0.1640, yN = 0.1723, },   
+      { xN = 0.1640, yN = 0.1723, },
    }
 }

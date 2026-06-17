@@ -16,7 +16,7 @@ tamriel.zones[74] = {
    faction = "EP",
    storyIndex = 1,
    textureFile = prefix..subfolder.."blob-bleakrockisle.dds",
-   bounds = { xN = 0.63183, yN = 0.23645, widthN = 0.02026, heightN = 0.02026, },
+   bounds = { xN = 0.63183, yN = 0.20518, widthN = 0.02026, heightN = 0.02026, },
    hitbox = {
       { xN = 0.5115, yN = 0.0537, },
       { xN = 0.1244, yN = 0.1342, },
@@ -27,7 +27,7 @@ tamriel.zones[74] = {
       { xN = 0.9638, yN = 0.5137, },
       { xN = 0.9638, yN = 0.3949, },
       { xN = 0.7798, yN = 0.2185, },
-      { xN = 0.6150, yN = 0.1074, },   
+      { xN = 0.6150, yN = 0.1074, },
    },
 }
 
@@ -36,7 +36,7 @@ tamriel.zones[75] = {
    faction = "EP",
    storyIndex = 2,
    textureFile = prefix..subfolder.."blob-balfoyen.dds",
-   bounds = { xN = 0.8078, yN = 0.43212, widthN = 0.02429, heightN = 0.02429, },
+   bounds = { xN = 0.8078, yN = 0.40085, widthN = 0.02429, heightN = 0.02429, },
    offsets = { xN = 0.001464844, },
    hitbox = {
       { xN = 0.1318, yN = 0.1411, },
@@ -60,7 +60,7 @@ tamriel.zones[7] = {
    faction = "EP",
    storyIndex = 3,
    textureFile = prefix..subfolder.."blob-stonefalls.dds",
-   bounds = { xN = 0.686, yN = 0.387, widthN = 0.126586, heightN = 0.126586, },
+   bounds = { xN = 0.686, yN = 0.35573, widthN = 0.126586, heightN = 0.126586, },
    hitbox = {
       { xN = 0.1894, yN = 0.1431, },
       { xN = 0.0963, yN = 0.1908, },
@@ -119,7 +119,7 @@ tamriel.zones[7] = {
       { xN = 0.3324, yN = 0.2019, },
       { xN = 0.2582, yN = 0.1464, },
       { xN = 0.2194, yN = 0.1331, },
-      { xN = 0.1861, yN = 0.1453, },   
+      { xN = 0.1861, yN = 0.1453, },
    }
 }
 
@@ -128,7 +128,7 @@ tamriel.zones[13] = {
    faction = "EP",
    storyIndex = 4,
    textureFile = prefix..subfolder.."blob-deshaan.dds",
-   bounds = { xN = 0.716186, yN = 0.4353, widthN = 0.14526, heightN = 0.14526, },
+   bounds = { xN = 0.716186, yN = 0.40403, widthN = 0.14526, heightN = 0.14526, },
    hitbox = {
       { xN = 0.0193, yN = 0.3963, },
       { xN = 0.0018, yN = 0.4453, },
@@ -163,7 +163,7 @@ tamriel.zones[13] = {
       { xN = 0.2002, yN = 0.3942, },
       { xN = 0.1208, yN = 0.3733, },
       { xN = 0.0618, yN = 0.3925, },
-      { xN = 0.0366, yN = 0.3982, },   
+      { xN = 0.0366, yN = 0.3982, },
    }
 }
 
@@ -172,7 +172,7 @@ tamriel.zones[26] = {
    faction = "EP",
    storyIndex = 5,
    textureFile = prefix..subfolder.."blob-shadowfen.dds",
-   bounds = { xN = 0.70214, yN = 0.5487, widthN = 0.11767, heightN = 0.11767, },
+   bounds = { xN = 0.70214, yN = 0.51743, widthN = 0.11767, heightN = 0.11767, },
    hitbox = {
       { xN = 0.1630, yN = 0.1468, },
       { xN = 0.1463, yN = 0.1611, },
@@ -210,7 +210,7 @@ tamriel.zones[26] = {
       { xN = 0.4016, yN = 0.1397, },
       { xN = 0.2894, yN = 0.1170, },
       { xN = 0.2095, yN = 0.1265, },
-      { xN = 0.1833, yN = 0.1373, },   
+      { xN = 0.1833, yN = 0.1373, },
    }
 }
 
@@ -219,8 +219,8 @@ tamriel.zones[61] = {
    faction = "EP",
    storyIndex = 6,
    textureFile = prefix..subfolder.."blob-eastmarch.dds",
-   bounds = { xN = 0.5344, yN = 0.2423, widthN = 0.143676, heightN = 0.143676, },
-   hitbox = { 
+   bounds = { xN = 0.5344, yN = 0.21103, widthN = 0.143676, heightN = 0.143676, },
+   hitbox = {
       { xN = 0.5522, yN = 0.2153, },
       { xN = 0.5404, yN = 0.2185, },
       { xN = 0.4581, yN = 0.1944, },
@@ -262,7 +262,7 @@ tamriel.zones[61] = {
       { xN = 0.6620, yN = 0.1628, },
       { xN = 0.6174, yN = 0.1620, },
       { xN = 0.6047, yN = 0.1692, },
-      { xN = 0.5737, yN = 0.2129, },   
+      { xN = 0.5737, yN = 0.2129, },
    },
 }
 
@@ -271,7 +271,7 @@ tamriel.zones[125] = {
    faction = "EP",
    storyIndex = 7,
    textureFile = prefix..subfolder.."blob-therift.dds",
-   bounds = {  xN = 0.5499, yN = 0.3214, widthN = 0.1154785, heightN = 0.1154785, },
+   bounds = {  xN = 0.5499, yN = 0.29013, widthN = 0.1154785, heightN = 0.1154785, },
    offsets = { xN = 0.00244, yN = 0.00244, },
    hitbox = {
       { xN = 0.0763, yN = 0.1665, },
@@ -314,7 +314,7 @@ tamriel.zones[125] = {
       { xN = 0.2368, yN = 0.2258, },
       { xN = 0.1661, yN = 0.2014, },
       { xN = 0.1016, yN = 0.1850, },
-      { xN = 0.0835, yN = 0.1714, },   
+      { xN = 0.0835, yN = 0.1714, },
    }
 }
 
