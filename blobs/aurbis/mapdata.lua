@@ -26,95 +26,9 @@ aurbis.zones[27] = {
    },
 }
 
---[[
-
-      { xN = 0.3556, yN = 0.1872, },
-      { xN = 0.2774, yN = 0.2359, },
-      { xN = 0.2120, yN = 0.3065, },
-      { xN = 0.2320, yN = 0.3437, },
-      { xN = 0.2254, yN = 0.3929, },
-      { xN = 0.1923, yN = 0.4211, },
-      { xN = 0.1578, yN = 0.4275, },
-      { xN = 0.1480, yN = 0.4890, },
-      { xN = 0.1860, yN = 0.5103, },
-      { xN = 0.2038, yN = 0.5512, },
-      { xN = 0.1946, yN = 0.5949, },
-      { xN = 0.1670, yN = 0.6203, },
-      { xN = 0.1981, yN = 0.6911, },
-      { xN = 0.2516, yN = 0.7619, },
-      { xN = 0.3017, yN = 0.7987, },
-      { xN = 0.3442, yN = 0.7616, },
-      { xN = 0.3772, yN = 0.7581, },
-      { xN = 0.4145, yN = 0.7762, },
-      { xN = 0.4372, yN = 0.8292, },
-      { xN = 0.4305, yN = 0.8545, },
-      { xN = 0.5389, yN = 0.8590, },
-      { xN = 0.6238, yN = 0.8394, },
-      { xN = 0.6606, yN = 0.8222, },
-      { xN = 0.6520, yN = 0.7850, },
-      { xN = 0.6672, yN = 0.7454, },
-      { xN = 0.7088, yN = 0.7196, },
-      { xN = 0.7547, yN = 0.7278, },
-      { xN = 0.7691, yN = 0.7391, },
-      { xN = 0.7939, yN = 0.7063, },
-      { xN = 0.7764, yN = 0.6858, },
-      { xN = 0.7671, yN = 0.6483, },
-      { xN = 0.7835, yN = 0.6053, },
-      { xN = 0.8250, yN = 0.5815, },
-      { xN = 0.8456, yN = 0.5821, },
-      { xN = 0.8532, yN = 0.5298, },
-      { xN = 0.8529, yN = 0.4820, },
-      { xN = 0.8244, yN = 0.4772, },
-      { xN = 0.7939, yN = 0.4574, },
-      { xN = 0.7771, yN = 0.4143, },
-      { xN = 0.7911, yN = 0.3704, },
-      { xN = 0.8163, yN = 0.3497, },
-      { xN = 0.7850, yN = 0.2990, },
-      { xN = 0.7454, yN = 0.2540, },
-      { xN = 0.7212, yN = 0.2721, },
-      { xN = 0.6830, yN = 0.2773, },
-      { xN = 0.6451, yN = 0.2587, },
-      { xN = 0.6258, yN = 0.2262, },
-      { xN = 0.6251, yN = 0.1960, },
-      { xN = 0.6300, yN = 0.1812, },
-      { xN = 0.5613, yN = 0.1612, },
-      { xN = 0.4929, yN = 0.1565, },
-      { xN = 0.4892, yN = 0.1888, },
-      { xN = 0.4524, yN = 0.2308, },
-      { xN = 0.4078, yN = 0.2346, },
-      { xN = 0.3694, yN = 0.2116, },
-
-
-
-
-
-      { xN = 0.264, yN = 0.188 },
-      { xN = 0.160, yN = 0.255 },
-      { xN = 0.064, yN = 0.371 },
-      { xN = 0.033, yN = 0.495 },
-      { xN = 0.036, yN = 0.728 },
-      { xN = 0.030, yN = 0.766 },
-      { xN = 0.086, yN = 0.835 },
-      { xN = 0.205, yN = 0.845 },
-      { xN = 0.328, yN = 0.782 },
-      { xN = 0.443, yN = 0.812 },
-      { xN = 0.549, yN = 0.831 },
-      { xN = 0.616, yN = 0.821 },
-      { xN = 0.668, yN = 0.836 },
-      { xN = 0.761, yN = 0.833 },
-      { xN = 0.799, yN = 0.812 },
-      { xN = 0.833, yN = 0.761 },
-      { xN = 0.864, yN = 0.701 },
-      { xN = 0.872, yN = 0.603 },
-      { xN = 0.925, yN = 0.443 },
-      { xN = 0.949, yN = 0.282 },
-      { xN = 0.947, yN = 0.243 },
-      { xN = 0.932, yN = 0.234 },
-      { xN = 0.421, yN = 0.188 },
-      { xN = 0.267, yN = 0.190 },
---]]
-
+-----------------
 -- Coldharbour --
+-----------------
 aurbis.zones[255] = {
    textureFile = prefix..subfolder.."blob-realm.dds",
    bounds = { xN = 0.0970, yN = 0.2890, widthN = 0.1386, heightN = 0.1386, },
@@ -166,6 +80,7 @@ aurbis.zones[255] = {
 
 --------------------
 -- Clockwork City --
+--------------------
 aurbis.zones[1313] = {
    textureFile = prefix..subfolder.."blob-realm.dds",
    bounds = { xN = 0.625, yN = 0.140, widthN = 0.1386, heightN = 0.1386, },
@@ -208,9 +123,10 @@ aurbis.zones[1313] = {
 
 -------------
 -- Artaeum --
+-------------
 aurbis.zones[1429] = {
    textureFile = prefix..subfolder.."blob-realm.dds",
-   bounds = { xN = 0.3, yN = 0.757, widthN = 0.1386, heightN = 0.1386, },
+   bounds = { xN = 0.2992, yN = 0.7572, widthN = 0.1386, heightN = 0.1386, },
    hitbox = {
       { xN = 0.473, yN = 0.005 },
       { xN = 0.352, yN = 0.027 },
@@ -250,6 +166,7 @@ aurbis.zones[1429] = {
 
 ----------------
 -- Blackreach --
+----------------
 maps[1782] = { parentMapID = 439, }
 aurbis.zones[1782] = {
    textureFile = prefix..subfolder.."blob-realm.dds",
@@ -291,11 +208,12 @@ aurbis.zones[1782] = {
    },
 }
 
---------------
--- Fargrave --
-aurbis.zones[2021] = {
+-------------------
+-- The Deadlands --
+-------------------
+aurbis.zones[2119] = {
    textureFile = prefix..subfolder.."blob-realm.dds",
-   bounds = { xN = 0.653, yN = 0.720, widthN = 0.1386, heightN = 0.1386, },
+   bounds = { xN = 0.653, yN = 0.7207, widthN = 0.1386, heightN = 0.1386, },
    hitbox = {
       { xN = 0.473, yN = 0.005 },
       { xN = 0.352, yN = 0.027 },
@@ -333,11 +251,12 @@ aurbis.zones[2021] = {
    },
 }
 
--------------------
--- The Deadlands --
-aurbis.zones[2119] = {
+------------------
+---- Fargrave ----
+------------------
+aurbis.zones[2021] = {
    textureFile = prefix..subfolder.."blob-realm.dds",
-   bounds = { xN = 0.768, yN = 0.583, widthN = 0.1386, heightN = 0.1386, },
+   bounds = { xN = 0.7675, yN = 0.5825, widthN = 0.1386, heightN = 0.1386, },
    hitbox = {
       { xN = 0.473, yN = 0.005 },
       { xN = 0.352, yN = 0.027 },
@@ -377,9 +296,10 @@ aurbis.zones[2119] = {
 
 ---------------
 -- Apocrypha --
+---------------
 aurbis.zones[2275] = {
    textureFile = prefix..subfolder.."blob-realm.dds",
-   bounds = { xN = 0.7778, yN = 0.3437, widthN = 0.1386, heightN = 0.1386, },
+   bounds = { xN = 0.772, yN = 0.3325, widthN = 0.1386, heightN = 0.1386, },
    hitbox = {
       { xN = 0.473, yN = 0.005 },
       { xN = 0.352, yN = 0.027 },
@@ -420,9 +340,10 @@ aurbis.zones[2275] = {
 
 ------------
 -- Eyevea --
+------------
 aurbis.zones[108] = {
    textureFile = prefix..subfolder.."blob-realm.dds",
-   bounds = { xN = 0.068, yN = 0.489, widthN = 0.1386, heightN = 0.1386, },
+   bounds = { xN = 0.0701, yN = 0.5096, widthN = 0.1386, heightN = 0.1386, },
    hitbox = {
       { xN = 0.473, yN = 0.005 },
       { xN = 0.352, yN = 0.027 },
