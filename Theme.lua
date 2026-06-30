@@ -130,19 +130,73 @@ overrides[ "GetMapBlobNameInfo" ] = function(self, output, blobIndex)
    return output
 end
 
-overrides[ "WORLD_MAP_QUEST_BREADCRUMBS.AddQuestConditionPosition" ] = function(self, output, _self, conditionData, positionData)
+-- quadratic equation fit to selected quest point data. it's still pretty innacurate but whatever.
+-- I hoped that a bounding box -> bounding box transform would be better, but the terrain between the two maps is quite different
+-- I should revisit this in future and try again.
+local function TransformAurbisCoords(x, y)
+    local newX = -0.181551 * x * x + 1.131831 * x - 0.003232
+    local newY = 0.432271 * y * y + 0.472330 * y + 0.143525
+    return newX, newY
+end
+
+overrides["WORLD_MAP_QUEST_BREADCRUMBS.AddQuestConditionPosition"] = function(self, output, _self, conditionData, positionData)
    local map = self:GetCurrentMap()
-   if map and map:IsMapTamriel() and positionData and positionData.xLoc and positionData.yLoc then
-      local _, _, _, _, _, _, mapId = GetMapMouseoverInfo( positionData.xLoc, positionData.yLoc )
-      if mapId then
-         local x, y = self:GetFixedGlobalCoordinates( mapId, positionData.xLoc, positionData.yLoc )
-         if x and y then
-            positionData.xLoc, positionData.yLoc = x, y
+   if map and positionData and positionData.xLoc and positionData.yLoc then
+      local isTamriel = map:IsMapTamriel()
+      local isAurbis = map:IsMapAurbis()
+      if isTamriel or isAurbis then
+         local _, _, _, _, _, _, mapId = GetMapMouseoverInfo(positionData.xLoc, positionData.yLoc)
+         if mapId then
+            local x, y = self:GetFixedGlobalCoordinates(mapId, positionData.xLoc, positionData.yLoc)
+            if isAurbis then
+               local mapFromId = map:GetZoneById(mapId)
+               if mapFromId and mapId ~= 27 then
+                  local xN, yN, widthX, heightY = mapFromId:GetBounds()
+                  positionData.xLoc, positionData.yLoc = xN + widthX / 2, yN + heightY / 2
+               elseif mapId == 27 then
+                  positionData.xLoc, positionData.yLoc = TransformAurbisCoords(x, y)
+               end
+            elseif x and y then
+               positionData.xLoc, positionData.yLoc = x, y
+            end
          end
       end
    end
    return output
 end
+
+overrides[ "GetMapPlayerPosition" ] = function( self, output, unitTag )
+   local playerMapId = self:GetPlayerMapIdFromUnitTag( unitTag )
+   local map = self:GetCurrentMap()
+
+   if map and map:IsMapTamriel() then
+      output[1], output[2] = self:GetFixedGlobalCoordinates( playerMapId, output[1], output[2] )
+   end
+
+   if playerMapId == 108 then -- show player in eyevea
+      output[4] = true
+   end
+
+   if map and map:IsMapAurbis() then
+      local _, _, _, _, _, _, mapId = GetMapMouseoverInfo(output[1], output[2])
+      local mapFromId = map:GetZoneById(mapId)
+
+      if mapFromId and mapId ~= 27 then
+         local xN, yN, widthX, heightY = mapFromId:GetBounds()
+         output[1], output[2] = xN + widthX / 2, yN + heightY / 2
+         return output
+      elseif mapId == 27 then
+         local x, y = self:GetFixedGlobalCoordinates(mapId, output[1], output[2])
+         output[1], output[2] = TransformAurbisCoords(x, y)
+         return output
+      end
+   end
+
+   -- 1            2            3          4
+   -- normalizedX, normalizedY, direction, isShownInCurrentMap
+   return output
+end
+
 
 -- Aurbis --
 maps[ 439 ] = {
