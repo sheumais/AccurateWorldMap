@@ -108,7 +108,6 @@ overrides[ "GetFastTravelNodeInfo" ] = function ( self, output, nodeIndex )
 end
 
 -- https://github.com/esoui/esoui/blob/990654b6b54471de5bcdc576b163895518882510/esoui/ingame/map/worldmap.lua#L2331
-local origFastTravelPriorityFunc = GetFastTravelNodeMapPriority
 overrides[ "GetFastTravelNodeMapPriority" ] = function( self, output, nodeIndex )
    local map = self:GetCurrentMap()
    if map and map:IsMapTamriel() then
@@ -118,8 +117,6 @@ overrides[ "GetFastTravelNodeMapPriority" ] = function( self, output, nodeIndex 
          if (poi:IsMajorSettlement() and options and options.pois.majorSettlements)
          or (poi:IsGuildShrine() and options and options.pois.guildShrines) then
             output[1] = nil
-         else
-            output[1] = origFastTravelPriorityFunc(nodeIndex)
          end
       end
    end
@@ -128,10 +125,22 @@ end
 
 -- disable for now, can add settings functionality later 
 -- https://github.com/esoui/esoui/blob/990654b6b54471de5bcdc576b163895518882510/esoui/ingame/map/worldmap.lua#L4576
-local origMapBlobInfo = GetMapBlobNameInfo
 overrides[ "GetMapBlobNameInfo" ] = function(self, output, blobIndex)
-   output[1], output[2], output[3], output[4], output[5] = origMapBlobInfo(blobIndex)
    output[1] = ""
+   return output
+end
+
+overrides[ "WORLD_MAP_QUEST_BREADCRUMBS.AddQuestConditionPosition" ] = function(self, output, _self, conditionData, positionData)
+   local map = self:GetCurrentMap()
+   if map and map:IsMapTamriel() and positionData and positionData.xLoc and positionData.yLoc then
+      local _, _, _, _, _, _, mapId = GetMapMouseoverInfo( positionData.xLoc, positionData.yLoc )
+      if mapId then
+         local x, y = self:GetFixedGlobalCoordinates( mapId, positionData.xLoc, positionData.yLoc )
+         if x and y then
+            positionData.xLoc, positionData.yLoc = x, y
+         end
+      end
+   end
    return output
 end
 
