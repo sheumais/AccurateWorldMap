@@ -197,7 +197,6 @@ overrides[ "GetMapPlayerPosition" ] = function( self, output, unitTag )
    return output
 end
 
-
 -- Aurbis --
 maps[ 439 ] = {
    zones = { },
@@ -259,6 +258,7 @@ mapDescriptions[ "Stirk" ] = "In the past, the lonesome island of Stirk has clai
 mapDescriptions[ "Eyevea" ]  = "Originally an island belonging to the Summerset Isles, Eyevea now serves as the home of the Mages Guild."
 
 -- Misc --
+mapDescriptions[ "Aurbis" ] = "The Aurbis is all the cosmos as created by Anu and Padomay. It is known as the Wheel, with Mundus as the hub and the Eight Divines as the spokes."
 mapDescriptions[ "Tamriel" ] = "In the ancient tongues, the land called 'Tamriel' means 'Dawn's Beauty'."
 mapDescriptions[ "Coldharbour" ] = "The dreadful Oblivion plane of Coldharbour is Molag Bal's realm of death, despair, and infinite cruelty."
 mapDescriptions[ "Cyrodiil" ] = "With the Empire's collapse, armies of the Dominion, Covenant, and Pact have all invaded the Heartlands of Cyrodiil, vying for the Imperial throne."
@@ -323,50 +323,6 @@ tamrielPois[364] = { xN = 0.180, yN = 0.622 } -- Cloudrest Trial
 tamrielPois[534] = { xN = 0.854, yN = 0.450 } -- Sanity's Edge Trial
 tamrielPois[247] = { xN = 0.563, yN = 0.455 } -- White Gold Tower Dungeon
 tamrielPois[236] = { xN = 0.563, yN = 0.448 } -- Imperial City Prison Dungeon
-
--- todo:
--- a fuck ton of islands. compare with original AWM version from 3+ years ago
--- wayshrine data for solstice
--- update blob for west weald
-
--- tamrielPois[332] = { xN = 0.451, yN = 0.356 } -- Falkreath Hold Dungeon
--- tamrielPois[345] = { xN = 0.452, yN = 0.360 } -- Hakkvild's High Hall House
--- tamrielPois[473] = { xN = 0.687, yN = 0.624 } -- Pantherfang Chapel House
--- tamrielPois[469] = { xN = 0.664, yN = 0.610 } -- The Dread Cellar Dungeon
--- tamrielPois[292] = { xN = 0.077, yN = 0.409 } -- Daggerfall Overlook House
--- tamrielPois[15] = { xN = 0.179, yN = 0.290, majorSettlement = true } -- Alcaire Castle Wayshrine
--- tamrielPois[14] = { xN = 0.171, yN = 0.308, majorSettlement = true } -- Koeglin Village Wayshrine
--- tamrielPois[22] = { xN = 0.244, yN = 0.317, majorSettlement = true } -- Wind Keep Wayshrine
--- tamrielPois[363] = { xN = 0.233, yN = 0.312 } -- Scalecaller Peak Dungeon
--- tamrielPois[56] = { xN = 0.227, yN = 0.338, majorSettlement = true } -- Wayrest Wayshrine
--- tamrielPois[498] = { xN = 0.219, yN = 0.245 } -- Shipwright's Regret Dungeon
--- tamrielPois[243] = { xN = 0.223, yN = 0.292 } -- Siege Road Wayshrine
--- tamrielPois[239] = { xN = 0.306, yN = 0.231 } -- Two Rivers Wayshrine
--- tamrielPois[250] = { xN = 0.324, yN = 0.239 } -- Maelstrom Arena Trial
--- tamrielPois[428] = { xN = 0.225, yN = 0.269 } -- Forgemaster Falls House
--- tamrielPois[242] = { xN = 0.257, yN = 0.291 } -- Frostbreak Ridge Wayshrine
--- tamrielPois[241] = { xN = 0.244, yN = 0.286 } -- Great Bay Wayshrine
--- tamrielPois[246] = { xN = 0.282, yN = 0.285 } -- Merchant Gate's Wayshrine
--- tamrielPois[244] = { xN = 0.293, yN = 0.277, majorSettlement = true } -- Orsinium Wayshrine
--- tamrielPois[245] = { xN = 0.273, yN = 0.278 } -- Trader's Road Wayshrine
--- tamrielPois[240] = { xN = 0.262, yN = 0.260 } -- Morkul Plain Wayshrine
--- tamrielPois[238] = { xN = 0.284, yN = 0.247 } -- Icy Shore Wayshrine
--- tamrielPois[237] = { xN = 0.301, yN = 0.256 } -- Shatul Wayshrine
--- tamrielPois[341] = { xN = 0.405, yN = 0.348 } -- Fang Lair Dungeon
--- tamrielPois[206] = { xN = 0.305, yN = 0.279 } -- Halcyon Lake Wayshrine
--- tamrielPois[313] = { xN = 0.304, yN = 0.275 } -- Mournmoth Keep House
--- tamrielPois[186] = { xN = 0.304, yN = 0.360 } -- Blackheart Haven Dungeon
--- tamrielPois[46] = { xN = 0.238, yN = 0.376, majorSettlement = true } -- Satakalaam Wayshrine
--- tamrielPois[407] = { xN = 0.614, yN = 0.790, majorSettlement = true } -- Dragonguard Sanctum Wayshrine
--- tamrielPois[325] = { xN = 0.658, yN = 0.732 } -- Grand Topal Hideaway House
--- tamrielPois[188] = { xN = 0.369, yN = 0.603 } -- Tempest Island Dungeon
--- tamrielPois[368] = { xN = 0.177, yN = 0.792 } -- Colossal Aldmeri Grotto House
--- tamrielPois[497] = { xN = 0.197, yN = 0.599 } -- Coral Aerie Dungeon
--- tamrielPois[368] = { xN = 0.607, yN = 0.776 } -- Colossal Aldmeri Grotto House
--- tamrielPois[373] = { xN = 0.299, yN = 0.857 } -- Grand Psijic Villa House
--- tamrielPois[428] = { xN = 0.170, yN = 0.571, disabled = false } -- Forgemaster Falls House
--- tamrielPois[236] = { xN = 0.495, yN = 0.132, disabled = false } -- Imperial City Prison Dungeon
-
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
 ---- Daggerfall Covenant -------- Daggerfall Covenant -------- Daggerfall Covenant -------- Daggerfall Covenant -------- Daggerfall Covenant ----
