@@ -225,6 +225,16 @@ maps[ 660 ] = {
    },
 }
 
+-- The Reach --
+maps[ 1814 ] = {
+   tileOverrides = {
+      [9] = prefix.."/tiles/reach/reach_base_08.dds",
+      [10] = prefix.."/tiles/reach/reach_base_09.dds",
+      [14] = prefix.."/tiles/reach/reach_base_13.dds",
+      [15] = prefix.."/tiles/reach/reach_base_14.dds",
+   },
+}
+
 -- Daggerfall Covenant --
 mapDescriptions[ "Stros M'Kai" ] = "The island of Stros M'Kai was one of the first regions settled by the Redguards when they sailed east from their lost homeland of Yokuda."
 mapDescriptions[ "Betnikh" ] = "Originally called Betony, this isle was conquered by the Seamount Orcs, who then renamed it to Betnikh."
