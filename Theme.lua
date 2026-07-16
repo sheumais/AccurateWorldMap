@@ -75,8 +75,44 @@ local callbacks = theme.callbacks
 --    return output
 -- end
 
+local canRedrawMap = true
+callbacks[ "OnWorldMapChanged" ] = function ( self )
+   if canRedrawMap then
+      local mapWidth, mapHeight = ZO_WorldMapContainer:GetDimensions()
+      local mapDescPaddingAmount = mapWidth * 0.11
+      ZO_WorldMapMouseOverDescription:SetFont("ZoFontGameLargeBold")
+      ZO_WorldMapMouseOverDescription:SetWrapMode(TEXT_WRAP_MODE_ELLIPSIS)
+      ZO_WorldMapMouseOverDescription:ClearAnchors()
+      ZO_WorldMapMouseOverDescription:SetAnchor(TOPLEFT, ZO_WorldMapMouseoverName, BOTTOMLEFT, mapDescPaddingAmount, 2)
+      ZO_WorldMapMouseOverDescription:SetAnchor(TOPRIGHT, ZO_WorldMapMouseoverName, BOTTOMRIGHT, -(mapDescPaddingAmount), 4)
+
+      -- AWM_MouseOverGrungeTex:ClearAnchors()
+      -- AWM_MouseOverGrungeTex:SetAnchor(TOPLEFT, ZO_WorldMap, TOPLEFT, 0, 0)
+      -- AWM_MouseOverGrungeTex:SetDimensions(mapWidth, mapHeight)
+
+      -- -- set up label description background
+      -- if (IsInGamepadPreferredMode()) then
+      --    AWM_MouseOverGrungeTex:SetTexture("AccurateWorldMap/misc/gamepad_shadow.dds")
+      --    AWM_MouseOverGrungeTex:SetAlpha(0.65)
+      -- else
+      --    AWM_MouseOverGrungeTex:SetTexture("AccurateWorldMap/misc/pc_shadow.dds")
+      --    AWM_MouseOverGrungeTex:SetAlpha(0.45)
+      -- end
+
+      -- AWM_MouseOverGrungeTex:SetDrawTier(DT_PARENT)
+      -- AWM_MouseOverGrungeTex:SetDrawLayer(DL_OVERLAY)
+      -- AWM_MouseOverGrungeTex:SetDrawLayer(DL_CONTROLS)
+      -- AWM_MouseOverGrungeTex:SetHidden(true)
+
+      -- hide edge overlay if not in gamepad
+      ZO_WorldMapContainerRaggedEdge:SetHidden(not IsInGamepadPreferredMode())
+      canRedrawMap = false
+   end
+end
+
+
 overrides[ "GetFastTravelNodeInfo" ] = function ( self, output, nodeIndex )
-   output[ 2 ] = self:GetRename( output[2] )
+   output[ 2 ] = self:GetRename( output[2] ) or output[2]
    if self:GetOptions().disablePoiGlow then output[6] = nil end
    local map = self:GetCurrentMap()
    if map and map:IsMapTamriel() then
@@ -236,81 +272,83 @@ maps[ 1814 ] = {
 }
 
 -- Daggerfall Covenant --
-mapDescriptions[ "Stros M'Kai" ] = "The island of Stros M'Kai was one of the first regions settled by the Redguards when they sailed east from their lost homeland of Yokuda."
-mapDescriptions[ "Betnikh" ] = "Originally called Betony, this isle was conquered by the Seamount Orcs, who then renamed it to Betnikh."
-mapDescriptions[ "Glenumbra" ] = "Glenumbra is the westernmost peninsula of High Rock and contains the city-states of Daggerfall and Camlorn."
-mapDescriptions[ "Stormhaven" ] = "Stormhaven is the geographic center of High Rock, and also the home of the great trading city of Wayrest, capital of the Daggerfall Covenant."
-mapDescriptions[ "Rivenspire" ] = "This northwestern region of High Rock contains some of the province's most dramatic terrain, including towering, flinty crags, windswept moors, and narrow canyons."
-mapDescriptions[ "Alik'r Desert" ] = "The Alik'r may be rich in mineral resources, but its fierce creatures and harsh terrain are too daunting for most."
-mapDescriptions[ "Bangkorai" ] = "This region takes its name from its most famous feature, the Bangkorai Pass, which has served as High Rock's defense against the wild raiders of Hammerfell for generations."
+mapDescriptions[ 201 ]  = "The island of Stros M'Kai was one of the first regions settled by the Redguards when they sailed east from their lost homeland of Yokuda."
+mapDescriptions[ 227 ]  = "Originally called Betony, this isle was conquered by the Seamount Orcs, who then renamed it to Betnikh."
+mapDescriptions[ 1 ]    = "Glenumbra is the westernmost peninsula of High Rock and contains the city-states of Daggerfall and Camlorn."
+mapDescriptions[ 12 ]   = "Stormhaven is the geographic center of High Rock, and also the home of the great trading city of Wayrest, capital of the Daggerfall Covenant."
+mapDescriptions[ 10 ]   = "This northwestern region of High Rock contains some of the province's most dramatic terrain, including towering, flinty crags, windswept moors, and narrow canyons."
+mapDescriptions[ 30 ]   = "The Alik'r may be rich in mineral resources, but its fierce creatures and harsh terrain are too daunting for most."
+mapDescriptions[ 20 ]   = "This region takes its name from its most famous feature, the Bangkorai Pass, which has served as High Rock's defense against the wild raiders of Hammerfell for generations."
 
 -- Ebonheart Pact --
-mapDescriptions[ "Bleakrock Isle" ] = "Bleakrock Isle may seem like a quaint fishing island but its strategic importance cannot be understated - sitting in the mouth of the Yorgrim River, \nit acts as a chokepoint for all vessels entering or leaving the port of Windhelm, and is a gateway east to Morrowind."
-mapDescriptions[ "Bal Foyen" ] = "This region is known as Bal Foyen, a wild expanse of marshland and volcanic landscapes, now being used to farm saltrice by the Dark Elves' former Argonian slaves."
-mapDescriptions[ "Stonefalls" ] = "This ashy region of Morrowind known as Stonefalls was where the recent invading army from Akavir met its bloody end."
-mapDescriptions[ "Deshaan" ] = "The fertile valleys of Deshaan are home to lush fungal forests, deep kwama mines, and broad pastures where netches and guar graze."
-mapDescriptions[ "Shadowfen" ] = "Shadowfen has had more contact with Tamrielic civilisation than most of Black Marsh, primarily due to the activities of the Dunmeri slavers who once operated here."
-mapDescriptions[ "Eastmarch" ] = "Eastmarch is the first of Old Holds - the earliest regions of Skyrim settled by the Nords when they arrived from Atmora."
-mapDescriptions[ "The Rift" ] = "The southeastern hold of Skyrim, The Rift is a temperate region northwest of the intersection between the Jerall Mountains and the Velothi Mountains - which house the gateway to Morrowind."
+mapDescriptions[ 74]    = "Bleakrock Isle may seem like a quaint fishing island but its strategic importance cannot be understated - sitting in the mouth of the Yorgrim River, \nit acts as a chokepoint for all vessels entering or leaving the port of Windhelm, and is a gateway east to Morrowind."
+mapDescriptions[ 75 ]   = "This region is known as Bal Foyen, a wild expanse of marshland and volcanic landscapes, now being used to farm saltrice by the Dark Elves' former Argonian slaves."
+mapDescriptions[ 7 ]    = "This ashy region of Morrowind known as Stonefalls was where the recent invading army from Akavir met its bloody end."
+mapDescriptions[ 13 ]   = "The fertile valleys of Deshaan are home to lush fungal forests, deep kwama mines, and broad pastures where netches and guar graze."
+mapDescriptions[ 26 ]   = "Shadowfen has had more contact with Tamrielic civilisation than most of Black Marsh, primarily due to the activities of the Dunmeri slavers who once operated here."
+mapDescriptions[ 61 ]   = "Eastmarch is the first of Old Holds - the earliest regions of Skyrim settled by the Nords when they arrived from Atmora."
+mapDescriptions[ 125 ]  = "The southeastern hold of Skyrim, The Rift is a temperate region northwest of the intersection between the Jerall Mountains and the Velothi Mountains - which house the gateway to Morrowind."
 
 -- Aldmeri Dominion --
-mapDescriptions[ "Khenarthi's Roost" ] = "This island off the southern coast of Elsweyr is named after the Khajiiti goddess of weather and the sky, who is usually represented as a great hawk."
-mapDescriptions[ "Auridon" ] = "The second largest of the Summerset Isles, Auridon has always served the High Elves as a buffer between their serene archipelago and the turmoil of Tamriel."
-mapDescriptions[ "Grahtwood" ] = "This region is the southern heart of the Wood Elves' great forest, and home to more of the gigantic graht-oaks than any other part of Valenwood."
-mapDescriptions[ "Greenshade" ] = "Greenshade is a land of flowing rivers and fertile plains that occupies the southwest portion of Valenwood."
-mapDescriptions[ "Malabal Tor" ] = "Malabal Tor is the northwest region of Valenwood, on the coast of the Abecean Sea and the Strid River estuary."
-mapDescriptions[ "Reaper's March" ] = "Once known simply as Northern Valenwood, this region that borders Cyrodiil and Elsweyr has seen much bloody warfare."
+mapDescriptions[ 258 ]  = "This island off the southern coast of Elsweyr is named after the Khajiiti goddess of weather and the sky, who is usually represented as a great hawk."
+mapDescriptions[ 143 ]  = "The second largest island of the Summerset Isles, Auridon has always served the High Elves as a buffer between their serene archipelago and the turmoil of Tamriel."
+mapDescriptions[ 9 ]    = "This region is the southern heart of the Wood Elves' great forest, and home to more of the gigantic graht-oaks than any other part of Valenwood."
+mapDescriptions[ 300 ]  = "Home to many tribal Bosmer, flowing rivers and fertile plains occupy this portion of Valenwood."
+mapDescriptions[ 22 ]   = "This region is dotted with numerous smaller Bosmeri settlements, and bounded on the north by the the mouth of the Strid River, which empties into the Abecean Sea."
+mapDescriptions[ 256 ]  = "Once known simply as Northern Valenwood, this region that borders Cyrodiil and Anequina has seen much bloody warfare."
 
 -- Islands --
-mapDescriptions[ "Sword's Rest Isle" ] = "This island, also known as Emeric's Retreat, is used as a getaway by High King Emeric for when he wants to escape the pressures of running the Daggerfall Covenant."
-mapDescriptions[ "Grayhome" ] = "The frozen island of Grayhome is home to an ornate castle, formerly occupied by the Gray Host."
-mapDescriptions[ "Stirk" ] = "In the past, the lonesome island of Stirk has claimed by Valenwood, the Gold Coast, Hammerfell, and even the Ayleids. Now though, it's no-man's-land."
-mapDescriptions[ "Eyevea" ]  = "Originally an island belonging to the Summerset Isles, Eyevea now serves as the home of the Mages Guild."
+mapDescriptions[ 2143 ] = "This island, also known as Emeric's Retreat, is used as a getaway by High King Emeric for when he wants to escape the pressures of running the Daggerfall Covenant."
+mapDescriptions[ 1864 ] = "The frozen island of Grayhome is home to an ornate castle, formerly occupied by the Gray Host."
+mapDescriptions[ 415 ]  = "In the past, the lonesome island of Stirk has been claimed by Valenwood, the Gold Coast, Hammerfell, and even the Ayleids."
+mapDescriptions[ 108 ]  = "Originally an island belonging to the Summerset Isles, Eyevea now serves as the home of the Mages Guild."
 
 -- Misc --
-mapDescriptions[ "Aurbis" ] = "The Aurbis is all the cosmos as created by Anu and Padomay. It is known as the Wheel, with Mundus as the hub and the Eight Divines as the spokes."
-mapDescriptions[ "Tamriel" ] = "In the ancient tongues, the land called 'Tamriel' means 'Dawn's Beauty'."
-mapDescriptions[ "Coldharbour" ] = "The dreadful Oblivion plane of Coldharbour is Molag Bal's realm of death, despair, and infinite cruelty."
-mapDescriptions[ "Cyrodiil" ] = "With the Empire's collapse, armies of the Dominion, Covenant, and Pact have all invaded the Heartlands of Cyrodiil, vying for the Imperial throne."
+mapDescriptions[ 439 ]  = "The Aurbis is all the cosmos as created by Anu and Padomay. It is known as the Wheel, with Mundus as the hub and the Eight Divines as the spokes."
+mapDescriptions[ 27 ]   = "In the ancient tongues, the land called 'Tamriel' means 'Dawn's Beauty'."
+mapDescriptions[ 255 ]  = "The dreadful Oblivion plane of Coldharbour is Molag Bal's realm of death, despair, and infinite cruelty."
+mapDescriptions[ 16 ]   = "With the Empire's collapse, armies of the Dominion, Covenant, and Pact have all invaded the Heartlands of Cyrodiil, vying for the Imperial throne."
 
-mapDescriptions[ "The Earth Forge" ]  = "Situated in the Druadach Mountains between The Reach and Bangkorai, the Earth Forge is home to a secret Dwemer ruin. Now though, it is maintained by the Fighters Guild."
-mapDescriptions[ "Norg-Tzel" ]   = "Norg-Tzel, which means 'forbidden place' in the Argonian tongue, has much the same climate and terrain as the region of Black Marsh known as Murkmire."
-
-renames[ "Icereach Ramparts" ] = "Icereach"
-mapDescriptions[ "Icereach Ramparts" ] = "These frigid isles serves as the seat of power for the cruel Icereach Coven."
+mapDescriptions[ 103 ]  = "Situated in the Druadach Mountains between The Reach and Bangkorai, the Earth Forge is home to a secret Dwemer ruin. Now though, it is maintained by the Fighters Guild."
+mapDescriptions[ 1552 ] = "Norg-Tzel, which means 'forbidden place' in the Argonian tongue, has much the same climate and terrain as the region of Black Marsh known as Murkmire."
+mapDescriptions[ 1997 ] = "This island is most renowned as the site of the Direnni Tower, formerly the Adamantine Tower, the oldest known structure in Tamriel."
+renames[ 1737 ] = "Icereach"
+mapDescriptions[ 1737 ] = "These frigid isles serves as the seat of power for the cruel Icereach Coven."
+mapDescriptions[ 1325 ] = "The home of a powerful scrying device which also causes inclement weather."
+mapDescriptions[ 2164 ] = "An untouched islet on the far fringes of the Systres Archipelago inhabited by birds and beasts."
 
 
 -- Chapters
-mapDescriptions[ "Vvardenfell" ] = "The sprawling volcanic island of Vvardenfell dominates northern Morrowind, with the ever-smoldering peak of Red Mountain at its centre."
-renames[ "Summerset" ] = "Summerset Isles"
-mapDescriptions[ "Summerset" ] = "The land called Summerset is the birthplace of civilisation and magic as we know it in Tamriel."
-mapDescriptions[ "Artaeum" ] = "Home to the Psijic Order, this island was formerly part of the Summerset Isles, but disappeared from Nirn several centuries ago under mysterious circumstances."
-renames[ "Northern Elsweyr" ] = "Anequina"
-mapDescriptions[ "Northern Elsweyr" ] = "The region of Anequina derives its name from the dusty Ne-Quin-Al desert, which lies in its heart."
-mapDescriptions[ "Tideholm" ] = "This unassuming island off the southern coast of Elsweyr is known to house the ancient ruins of Fort Vashr - a former Dragonguard stronghold."
-mapDescriptions[ "Western Skyrim" ] = "Western Skyrim is a cold and unforgiving land, which consists of the holds of Haafingar, Karthald, and Hjaalmarch."
-mapDescriptions[ "Blackreach" ] = "Blackreach, a legendary and long-forgotten realm that extends beneath Skyrim - and perhaps beyond."
-mapDescriptions[ "Blackwood" ] = "Straddling the great Niben River and extending east into the bogs of the Argonian homeland, the Blackwood region serves as the maritime gate to Cyrodiil."
-mapDescriptions[ "High Isle and Amenos" ] = "High Isle is the largest of the Systres Archipelago, and serves as the center of politics and commerce for the region - predominantly from the port city of Gonfalon Bay."
-renames[ "Telvanni Peninsula" ] = "Central Highlands"
-mapDescriptions[ "Telvanni Peninsula" ] = "This region, also known as the Central Highlands, is the traditional homeland of Morrowind's Great House Indoril. Many Dunmer pilgrims travel this land, to pay respect at the City of the Dead, Necrom."
-mapDescriptions[ "Apocrypha" ] = "Hermaeus Mora's infinite realm of forbidden knowledge is described as a turbulent mire, glistening against the writhing brightness of a green sky, \nwhere every tome reveals secrets damning and inhumane, catalogued in chaos."
-mapDescriptions["West Weald"] = "West Weald encompasses three sub-regions. The Gold Road, the seat of the Colovian city of Skingrad. \nThe Colovian Highlands, home to the Imperial settlements of Sutch and Ontus, and the emergent jungle Dawnwood, home to the Wood Elf settlement of Vashabar."
-mapDescriptions["Solstice"] = "The isolated island of Solstice, off the southern coast of Tamriel, was mostly unknown or considered a cursed location by the mainlanders prior to the recent trouble with the revived Worm Cult. Now the Stirk Fellowship has opened the island to trade, diplomacy, and use as a staging ground."
+mapDescriptions[ 1060 ] = "This sprawling volcanic island dominates northern Morrowind, with the ever-smoldering peak of Red Mountain at its centre."
+renames[ 1349 ] = "Summerset Isles"
+mapDescriptions[ 1349 ] = "The land called Summerset is the birthplace of civilisation and magic as we know it in Tamriel."
+mapDescriptions[ 1429 ] = "Home to the Psijic Order, this island was formerly part of the Summerset Isles, but disappeared from Nirn several centuries ago under mysterious circumstances."
+renames[ 1555 ] = "Anequina"
+mapDescriptions[ 1555 ] = "The region of Anequina derives its name from the dusty Ne-Quin-Al desert, which lies in its heart."
+mapDescriptions[ 1684 ] = "This unassuming island off the southern coast of Elsweyr is known to house the ancient ruins of Fort Vashr - a former Dragonguard stronghold."
+mapDescriptions[ 1719 ] = "This cold and unforgiving land consists of the holds of Haafingar, Karthald, and Hjaalmarch."
+mapDescriptions[ 1782 ] = "A legendary and long-forgotten realm that extends beneath Skyrim - and perhaps beyond."
+mapDescriptions[ 1887 ] = "Straddling the great Niben River and extending east into the bogs of the Argonian homeland, the region serves as the maritime gate to Cyrodiil."
+mapDescriptions[ 2114 ] = "High Isle is the largest island in the Systres Archipelago, and serves as the center of politics and commerce for the region."
+renames[ 2274 ] = "Central Highlands"
+mapDescriptions[ 2274 ] = "This region is the traditional homeland of Morrowind's Great House Indoril. Many Dunmer pilgrims travel this land, to pay respect at the City of the Dead, Necrom."
+mapDescriptions[ 2275 ] = "Hermaeus Mora's infinite realm is haunted by the ghosts of mortals forever searching for knowledge."
+mapDescriptions[ 2427 ] = "West Weald encompasses three sub-regions: the Gold Road, the Colovian Highlands, and the emergent jungle Dawnwood."
+mapDescriptions[ 2603 ] = "This isolated island was mostly unknown by mainlanders prior to the recent trouble with the revived Worm Cult. Now the Stirk Fellowship has opened the island to trade, diplomacy, and use as a staging ground."
 
 -- DLC --
-mapDescriptions[ "Craglorn" ] = "Though occasionally crossed by caravans and Covenant troops going to and from Cyrodiil, this wild region of eastern Hammerfell is otherwise a virtual no-man's-land."
-mapDescriptions[ "Wrothgar" ] = "The Wrothgar Mountains have been home to northern Tamriel's Orcs since the beginning of recorded is history."
-mapDescriptions[ "Hew's Bane" ] = "Prince Hew claimed this Hammerfell peninsula for his own, but when all of his ambitious endeavors ended in failure, the region acquired the nickname Hew's Bane."
-mapDescriptions[ "Gold Coast" ] = "The Gold Coast has always served as Cyrodiil's gateway to the Abecean Sea, but with the Alliance War, the region has gone its own way."
-mapDescriptions[ "Clockwork City" ] = "Clockwork City is the mysterious mechanical realm of Sotha Sil, one of the living gods of the Tribunal - it's purpose is unknown."
-mapDescriptions[ "Murkmire" ] = "Legend holds that the region informally known as Murkmire once extended much further south before it sank beneath the waves."
-renames[ "Southern Elsweyr" ] = "Pellitine"
-mapDescriptions[ "Southern Elsweyr" ] = "Consisting of the southern-most tip of Elsweyr, the Quin'rawl peninsula has a complex history that stretches back into antiquity."
-mapDescriptions[ "The Reach" ] = "The rocky highlands of the Reach contains savage predators, perilous Dwarven ruins, and hostile Reach clans."
-mapDescriptions[ "Fargrave" ] = "The princeless realm of Fargrave is known as 'The Celestial Palanquin' - a place where mortal and Daedra alike are free to do whatever they please."
-mapDescriptions[ "The Deadlands" ] = "The Deadlands is Mehrunes Dagon's realm of unending destruction, fire and storm and disaster personified."
-mapDescriptions[ "Galen" ] = "Galen is the westernmost island of the Systres archipelago, controlled by House Monard. Galen has been the home of the druids for thousands of years after their voluntary exile from High Rock."
+mapDescriptions[ 1126 ] = "Though occasionally crossed by caravans and Covenant troops going to and from Cyrodiil, this wild region of eastern Hammerfell is otherwise a no-man's-land."
+mapDescriptions[ 667 ]  = "The Wrothgar Mountains have been home to northern Tamriel's Orcs since the beginning of recorded history."
+mapDescriptions[ 994 ]  = "Prince Hew claimed this Hammerfell peninsula for his own, but when all of his ambitious endeavors ended in failure, the region acquired the nickname Hew's Bane."
+mapDescriptions[ 1006 ] = "The Gold Coast has always served as Cyrodiil's gateway to the Abecean Sea, but with the Alliance War, the region has gone its own way."
+mapDescriptions[ 1313 ] = "Clockwork City is the mysterious mechanical realm of Sotha Sil, one of the living gods of the Tribunal - its purpose is unknown."
+mapDescriptions[ 1484 ] = "Legend holds that the region informally known as Murkmire once extended much further south before it sank beneath the waves."
+renames[ 1654 ] = "Pellitine"
+mapDescriptions[ 1654 ] = "The Quin'rawl peninsula, the southern-most tip of Elsweyr, has a complex history that stretches back into antiquity."
+mapDescriptions[ 1814 ] = "The rocky highlands of the Reach contains savage predators, perilous Dwarven ruins, and hostile Reachmen clans."
+mapDescriptions[ 2021 ] = "The princeless realm of Fargrave is known as 'The Celestial Palanquin' - a place where mortal and Daedra alike are free to do whatever they please."
+mapDescriptions[ 2119 ] = "The Deadlands is Mehrunes Dagon's realm of unending destruction, fire and storm and disaster personified."
+mapDescriptions[ 2212 ] = "Galen, currently controlled by House Monard, has been the home of the druids for thousands of years after their voluntary exile from High Rock."
 
 
 local tamriel = maps[27]
