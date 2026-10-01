@@ -51,6 +51,7 @@ local renames = theme.renames
 local mapDescriptions = theme.mapDescriptions
 local overrides = theme.overrides
 local callbacks = theme.callbacks
+local libzone = LibZone
 
 -- -- Fade at top of map when mousehovered --
 -- local AWM_MouseOverGrungeTex = CreateControl( "AWM_MouseOverGrungeTex", ZO_WorldMap, CT_TEXTURE )
@@ -206,6 +207,39 @@ overrides[ "GetMapPlayerPosition" ] = function( self, output, unitTag )
    local map = self:GetCurrentMap()
 
    if map and map:IsMapTamriel() then
+      local zoneId = GetUnitWorldPosition( unitTag )
+      local pinX, pinY
+      local walkZoneId = zoneId
+      for _i = 1, 3 do
+         if not walkZoneId or walkZoneId <= 0 or walkZoneId == 2 then break end
+
+         local geoParentId = libzone:GetZoneGeographicalParentZoneId( walkZoneId )
+         local pinParentId, pinParentIndex, poiIndex, isValidPin = libzone:GetZoneMapPinInfo( walkZoneId, geoParentId )
+         if isValidPin then
+            local x, y = GetPOIMapInfo( pinParentIndex, poiIndex )
+            if x and y and ( x ~= 0 or y ~= 0 ) then
+               if pinParentId == 2 then
+                  pinX, pinY = x, y
+               else
+                  local pinMapId = GetMapIdByZoneId( pinParentId )
+                  pinX, pinY = self:GetFixedGlobalCoordinates( pinMapId, x, y )
+               end
+               if pinX and pinY then
+                  break
+               end
+            end
+         end
+
+         if not geoParentId or geoParentId == walkZoneId then break end
+         walkZoneId = geoParentId
+      end
+
+      if pinX and pinY then
+         output[1], output[2] = pinX, pinY
+         output[4] = true
+         return output
+      end
+
       output[1], output[2] = self:GetFixedGlobalCoordinates( playerMapId, output[1], output[2] )
    end
 
