@@ -5,7 +5,7 @@ _G[ themeName ] = {
    name = themeName,
    displayName = "Accurate World Map",
    author = "|C7851A9Xiokro|r, |C42ffbdVylaera|r & |C8587FFThal-J|r(EU)",
-   version = 2606160000,
+   version = 2611230000,
    slashCommand = "/accurateworldmap",
    website = "https://github.com/sheumais/AccurateWorldMap",
    prefix = "AccurateWorldMap",
@@ -295,16 +295,6 @@ maps[ 660 ] = {
    },
 }
 
--- The Reach --
-maps[ 1814 ] = {
-   tileOverrides = {
-      [9] = prefix.."/tiles/reach/reach_base_08.dds",
-      [10] = prefix.."/tiles/reach/reach_base_09.dds",
-      [14] = prefix.."/tiles/reach/reach_base_13.dds",
-      [15] = prefix.."/tiles/reach/reach_base_14.dds",
-   },
-}
-
 -- Daggerfall Covenant --
 mapDescriptions[ 201 ]  = "The island of Stros M'Kai was one of the first regions settled by the Redguards when they sailed east from their lost homeland of Yokuda."
 mapDescriptions[ 227 ]  = "Originally called Betony, this isle was conquered by the Seamount Orcs, who then renamed it to Betnikh."
@@ -342,6 +332,7 @@ mapDescriptions[ 439 ]  = "The Aurbis is all the cosmos as created by Anu and Pa
 mapDescriptions[ 27 ]   = "In the ancient tongues, the land called 'Tamriel' means 'Dawn's Beauty'."
 mapDescriptions[ 255 ]  = "The dreadful Oblivion plane of Coldharbour is Molag Bal's realm of death, despair, and infinite cruelty."
 mapDescriptions[ 16 ]   = "With the Empire's collapse, armies of the Dominion, Covenant, and Pact have all invaded the Heartlands of Cyrodiil, vying for the Imperial throne."
+mapDescriptions[ 2847 ] = "The war for the Ruby Throne has spilled out into this secluded vale separating Cyrodiil and Skyrim."
 
 mapDescriptions[ 103 ]  = "Situated in the Druadach Mountains between The Reach and Bangkorai, the Earth Forge is home to a secret Dwemer ruin. Now though, it is maintained by the Fighters Guild."
 mapDescriptions[ 1552 ] = "Norg-Tzel, which means 'forbidden place' in the Argonian tongue, has much the same climate and terrain as the region of Black Marsh known as Murkmire."
